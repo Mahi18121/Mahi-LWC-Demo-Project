@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="inputNumber" type="string"></aura:attribute>
+    <aura:attribute name="values" type="map"></aura:attribute>
+        <lightning:input label="Enter Number" value="{!v.inputNumber}"></lightning:input>
+        <lightning:button label="Give Table" onclick="{!c.callTable}"></lightning:button>
+        <br/>
+        <aura:iteration items="{!v.values}" var="eachValue">
+            {!v.inputNumber} * {!eachValue.key} = {!eachValue.value}
+            <br/>
+        </aura:iteration>
+</aura:component>

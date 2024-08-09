@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:card title="Navigation">
+        <lightning:button label="Home" onclick="{!c.navigateToHome}"></lightning:button>
+        <br/>
+        <lightning:button label="New Contact" onclick="{!c.navigateToNewCon}"></lightning:button>
+        <br/>
+        <lightning:button label="Contact List" onclick="{!c.navigateToConList}"></lightning:button>
+        <br/>
+        <!--lightning:button label="Contact with default values" onclick="{!c.navigateToNewContDef}"></lightning:button>-->
+        <lightning:navigation aura:id="navService"></lightning:navigation>
+    </lightning:card>
+</aura:component>
